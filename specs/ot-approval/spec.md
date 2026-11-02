@@ -11,13 +11,17 @@ Employees entered their Overtime comprising of OT Type (Pre-OT, Pre-OT for Next 
 
 The TMS Administrators verify the Overtime by checking the assigned overtime assigned by Resource Planners, Allocators, Control desk and approved by department managers or Duty Managers. The assigned over time can be a Hardcopy PDF (Cargo Services), Online Approval App export (Customer Services and Airside) and others that we need to check (Catering and Technical Services).
 
-Besides the OT hours approved by Management and the OT hours declared by the employees, the TMS Administrators also refer to the Clock in and clock out (refer to Attendance hereafter) received from the time-clock to address the following scenario:
+Besides the assigned OT hours approved by Management and the OT hours declared by the employees, the TMS Administrators also refer to the Clock in and clock out (refer to Attendance hereafter) received from the time-clock to address the following scenario:
 a. Employees who did not show up for Call Back OT. They will not have any Attendance received from the time-clock
 b. Employees who leave early due to OT completed earlier than expected for Post OT. They should be paid up till the clock-out. This practice is not applicable to Pre OT since the employee reports for work earlier upon by the instructions from management.
 
 Currently, the verification is done manually. As a result, OT is sometimes paid without an approved request, for more hours than were approved, or for time the staff member wasn't on site. Catching these cases is slow and inconsistent between admins.
 
 ## Goal
+
+We would like to implement an OT approval where 
+a. the TMS Administrators can verify the OT online with the approved assigned OT, the OT claimed by employees and attendance data be listed on the screen for easy reference and approval.
+b. the portal can implement logic to highlight exceptions that the TMS Administrators are using in their manual checks to facilitate approval.  
 
 For one shift date, a department admin can see every declared OT entry side by side with the approved request and the clock-in/out times. Discrepancies are flagged automatically. The admin corrects or rejects entries as needed and certifies the rest to SuccessFactors in one submission, with no manual cross-checking between systems.
 
