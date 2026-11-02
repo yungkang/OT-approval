@@ -44,10 +44,11 @@ TMS Adminstrators
 - [ ] AC1: Given no shift date or no department is selected, when I press Retrieve, then nothing is retrieved and the missing field is flagged inline ("Shift date is required." / "Select at least one department.").
 - [ ] AC2: Given a shift date, one or more departments and an optional SAP No, when I press Retrieve, the system retrieves 2 list - i) the approved assigned OT from Sharepoint, ii) OT hours declared by employees
 - [ ] AC3: Merge the 2 lists in AC2 using Shift date and SAP No.
-- [ ] AC4: For each record in AC3, I will retrieve the employee's name, department, roster and Attendance using Shift Date and SAP No.
-- [ ] AC5: The department picker lets me select multiple departments, and includes Select all and Clear.
-- [ ] AC6: Given no entries match, then I see "No OT entries found for the selected shift date, department(s) and SAP No."
-- [ ] AC7: Reset returns the filters to their defaults and clears any validation messages.
+- [ ] AC4: For each record in AC3, I will retrieve the employee's name, department, roster and Attendance using Shift Date and SAP No. Note that if the Attendance displayed is the timestamp captured in Auto-star time clock. If the timestamp is updated in SuccessFactors, it will not be reflected on this screen.
+- [ ] AC5: For PREO, PREN, POSO, POSP, the OT Start and OT End is computed adding the declared OT hours before or after the rostered shift. For CBOT, the OT Start Time is the approved assign OT start time, the OT End Time is computed by add the number of the declared hours to the OT Start Time. 
+- [ ] AC6: The department picker lets me select multiple departments, and includes Select all and Clear.
+- [ ] AC7: Given no entries match, then I see "No OT entries found for the selected shift date, department(s) and SAP No."
+- [ ] AC8: Reset returns the filters to their defaults and clears any validation messages.
 
 ### Comparison view
 
