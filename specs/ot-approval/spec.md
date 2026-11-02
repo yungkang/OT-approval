@@ -27,6 +27,7 @@ For one shift date, a department admin can see every declared OT entry side by s
 
 ## Users and journeys
 
+TMS Adminstrators
 1. As a department admin, I retrieve all OT entries for a shift date and one or more of my departments, optionally narrowed to one staff member by SAP No, so I can work through the day's OT.
 2. As a department admin, I see each entry's approved request directly above what the staff member declared, with clock-in/out beside them, so I can compare them at a glance.
 3. As a department admin, I can tell which entries need attention from a red/amber/green alert with a plain-language reason, so I check the problem cases first.
@@ -41,11 +42,12 @@ For one shift date, a department admin can see every declared OT entry side by s
 ### Retrieval
 
 - [ ] AC1: Given no shift date or no department is selected, when I press Retrieve, then nothing is retrieved and the missing field is flagged inline ("Shift date is required." / "Select at least one department.").
-- [ ] AC2: Given a shift date, one or more departments and an optional SAP No, when I press Retrieve, then I see every declared OT entry that matches, each showing the employee's name, SAP No, department and roster for that day.
-- [ ] AC3: The department picker lets me select multiple departments, and includes Select all and Clear.
-- [ ] AC4: The screen shows the time of the last retrieval and the three source systems (SharePoint OT requests, time clock, roster).
-- [ ] AC5: Given no entries match, then I see "No OT entries found for the selected shift date, department(s) and SAP No."
-- [ ] AC6: Reset returns the filters to their defaults and clears any validation messages.
+- [ ] AC2: Given a shift date, one or more departments and an optional SAP No, when I press Retrieve, the system retrieves 2 list - i) the approved assigned OT from Sharepoint, ii) OT hours declared by employees
+- [ ] AC3: Merge the 2 lists in AC2 using Shift date and SAP No.
+- [ ] AC4: For each record in AC3, I will retrieve the employee's name, department, roster and Attendance using Shift Date and SAP No.
+- [ ] AC5: The department picker lets me select multiple departments, and includes Select all and Clear.
+- [ ] AC6: Given no entries match, then I see "No OT entries found for the selected shift date, department(s) and SAP No."
+- [ ] AC7: Reset returns the filters to their defaults and clears any validation messages.
 
 ### Comparison view
 
