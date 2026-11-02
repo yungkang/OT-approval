@@ -7,15 +7,15 @@ Design reference: "OT Certification Screen" mock-up (23 Oct 2026)
 
 ## Problem
 
-Employees entered their Overtime comprising of OT Type (Pre-OT, Pre-OT for Next Day, Post OT, Post OT for Previous Day, Call Back OT, Meal break OT) and the number of hours they are claiming into AutoStar time clock. This information is updated into SuccessFactors. The TMS Administrators will verify the Overtime and shifts per employee per week in SuccessFactors. The TMS Administrators verify the Overtime by checking the assigned overtime assigned by Resource Planners, Allocators, Control desk and approved by department managers or Duty Managers. The assigned over time can be a Hardcopy PDF (Cargo Services), Online Approval App export (Customer Services and Airside) and others that we need to check (Catering and Technical Services).
+Employees entered their Overtime comprising of OT Type (Pre-OT, Pre-OT for Next Day, Post OT, Post OT for Previous Day, Call Back OT, Meal break OT) and the number of hours they are claiming into AutoStar time clock. This information is updated into SuccessFactors. The TMS Administrators will verify the Overtime and shifts per employee per week in SuccessFactors. 
 
-Department admins in airport ground handling (ramp, baggage, passenger services, cargo, load control, aircraft cleaning) have to certify the overtime that staff declare at the time clock before it is paid. Today they do this by checking three separate sources by hand:
+The TMS Administrators verify the Overtime by checking the assigned overtime assigned by Resource Planners, Allocators, Control desk and approved by department managers or Duty Managers. The assigned over time can be a Hardcopy PDF (Cargo Services), Online Approval App export (Customer Services and Airside) and others that we need to check (Catering and Technical Services).
 
-- management-approved OT requests in SharePoint
-- time-clock attendance in SQL Server
-- the duty roster
+Besides the OT hours approved by Management and the OT hours declared by the employees, the TMS Administrators also refer to the Clock in and clock out (refer to Attendance hereafter) received from the time-clock to address the following scenario:
+a. Employees who did not show up for Call Back OT. They will not have any Attendance received from the time-clock
+b. Employees who leave early due to OT completed earlier than expected for Post OT. They should be paid up till the clock-out. This practice is not applicable to Pre OT since the employee reports for work earlier upon by the instructions from management.
 
-As a result, OT is sometimes paid without an approved request, for more hours than were approved, or for time the staff member wasn't on site. Catching these cases is slow and inconsistent between admins.
+Currently, the verification is done manually. As a result, OT is sometimes paid without an approved request, for more hours than were approved, or for time the staff member wasn't on site. Catching these cases is slow and inconsistent between admins.
 
 ## Goal
 
