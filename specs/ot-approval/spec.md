@@ -1,10 +1,13 @@
 # 001 — OT Certification screen
 
-Risk tier: **High** (decides what overtime is paid through payroll)
-Owner: <product owner>  Status: Draft
+Risk tier: The risk **High** as the approved Overtime information is updated in SuccessFactors and then to Payroll for salary payment.
+Owner: Human Resources department
+Status: Draft. Subject to Department Management and TMS Administrators approval.
 Design reference: "OT Certification Screen" mock-up (23 Oct 2026)
 
 ## Problem
+
+Employees entered their Overtime comprising of OT Type (Pre-OT, Pre-OT for Next Day, Post OT, Post OT for Previous Day, Call Back OT, Meal break OT) and the number of hours they are claiming into AutoStar time clock. This information is updated into SuccessFactors. The TMS Administrators will verify the Overtime and shifts per employee per week in SuccessFactors. The TMS Administrators verify the Overtime by checking the assigned overtime assigned by Resource Planners, Allocators, Control desk and approved by department managers or Duty Managers. The assigned over time can be a Hardcopy PDF (Cargo Services), Online Approval App export (Customer Services and Airside) and others that we need to check (Catering and Technical Services).
 
 Department admins in airport ground handling (ramp, baggage, passenger services, cargo, load control, aircraft cleaning) have to certify the overtime that staff declare at the time clock before it is paid. Today they do this by checking three separate sources by hand:
 
