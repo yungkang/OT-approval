@@ -26,6 +26,10 @@ a. the TMS Administrators can verify the OT online with the approved assigned OT
 b. the portal can implement logic to highlight exceptions that the TMS Administrators are using in their manual checks to facilitate approval.  
 
 For one shift date, a department admin can see every declared OT entry side by side with the approved request and the clock-in/out times. Discrepancies are flagged automatically. The admin corrects or rejects entries as needed and certifies the rest to SuccessFactors in one submission, with no manual cross-checking between systems.
+•	Better control over OT payment: approved and validated hours, rather than having raw clocking entries reach SF directly.
+•	Less manual work: Admins review OT and exceptions in the app rather than opening SF employee records one by one.
+•	Clear accountability: Approvers authorize OT, Admins validate hours, and exceptions remain traceable.
+
 
 ## Users and journeys
 
@@ -37,7 +41,7 @@ TMS Adminstrators
 5. As a department admin, I can correct a declared entry (type, hours, start, end) to what was actually approved or attended, and still see what the staff member originally declared.
 6. As a department admin, I can mark an entry for rejection so it is never sent for payment. A rejection must carry a reason.
 7. As a department admin, I can save my work as a draft and come back later before submitting.
-8. As a department admin, I submit my certifications and rejections in one action and get confirmation of what was sent. The system will log my user ID, submission status, rejection reason and submission timestamp.
+8. As a department admin, I submit my certifications and rejections in one action and get confirmation of what was sent. Every approval, rejection, validation and manual entry is logged with the user, date and time, and kept for audit.
 
 ## Acceptance criteria
 
@@ -138,6 +142,15 @@ Each entry gets an overall severity, which is its worst issue. All issues are li
 - [ ] Is OT certified per shift date, or can a pay period's entries be retrieved together?
 - [ ] What is the cut-off for certifying before payroll runs? Should the screen show it?
 - [ ] What is the audit retention period?
+
+For HOD
+- [ ] Confirm whether Technical Ops and Cargo should use full approval or consolidated approval.
+- [ ] Confirm or amend the business rules marked To confirm, by 4 November.
+- [ ] Confirm that the proposed workflow fits each department’s actual OT practices and identify any special cases.
+- [ ] Nominate the approvers and administrators responsible for review, validation and exceptions.
+- [ ] Support staff communication and readiness for the new process.
+- [ ] BRD sign off by Oct. 30 (latest early next week).
+
 
 ## Risks and rollback
 
