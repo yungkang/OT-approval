@@ -1,5 +1,7 @@
 # 001 — OT Certification screen
 
+Scope: We will enhance the existing OT Approval App so that overtime hours are checked and approved before being sent to SAP SuccessFactors (SF). Employees will continue clocking their OT through Autostar, while Approvers and Admins will use the app.
+Today, OT hours can flow from Autostar into SF. Under the proposed process, the OT Approval App becomes the control point: only approved and validated OT hours are sent to SF. Admins can still enter OT directly in SF for exceptional cases, with a clear audit trail.
 Risk tier: The risk **High** as the approved Overtime information is updated in SuccessFactors and then to Payroll for salary payment.
 Owner: Human Resources department
 Status: Draft. Subject to Department Management and TMS Administrators approval.
@@ -33,16 +35,16 @@ TMS Adminstrators
 3. As a department admin, I can tell which entries need attention from a red/amber/green alert with a plain-language reason, so I check the problem cases first.
 4. As a department admin, I can bulk-select all entries that match their approved request, so routine OT takes seconds.
 5. As a department admin, I can correct a declared entry (type, hours, start, end) to what was actually approved or attended, and still see what the staff member originally declared.
-6. As a department admin, I can mark an entry for rejection so it is never sent for payment.
+6. As a department admin, I can mark an entry for rejection so it is never sent for payment. A rejection must carry a reason.
 7. As a department admin, I can save my work as a draft and come back later before submitting.
-8. As a department admin, I submit my certifications and rejections in one action and get confirmation of what was sent.
+8. As a department admin, I submit my certifications and rejections in one action and get confirmation of what was sent. The system will log my user ID, submission status, rejection reason and submission timestamp.
 
 ## Acceptance criteria
 
 ### Retrieval
 
 - [ ] AC1: Given no shift date or no department is selected, when I press Retrieve, then nothing is retrieved and the missing field is flagged inline ("Shift date is required." / "Select at least one department.").
-- [ ] AC2: Given a shift date, one or more departments and an optional SAP No, when I press Retrieve, the system retrieves 2 list - i) the approved assigned OT from Sharepoint, ii) OT hours declared by employees
+- [ ] AC2: Given a shift date, one or more departments and an optional SAP No, when I press Retrieve, the system retrieves 2 list - i) the approved assigned OT from Sharepoint, ii) OT hours declared by employees of un-certified OT. Certified OT will not show on the screen.
 - [ ] AC3: Merge the 2 lists in AC2 using Shift date and SAP No.
 - [ ] AC4: For each record in AC3, I will retrieve the employee's name, department, roster and Attendance using Shift Date and SAP No. Note that if the Attendance displayed is the timestamp captured in Auto-star time clock. If the timestamp is updated in SuccessFactors, it will not be reflected on this screen.
 - [ ] AC5: For PREO, PREN, POSO, POSP, the OT Start and OT End is computed adding the declared OT hours before or after the rostered shift. For CBOT, the OT Start Time is the approved assign OT start time, the OT End Time is computed by add the number of the declared hours to the OT Start Time. 
@@ -74,8 +76,6 @@ Each entry gets an overall severity, which is its worst issue. All issues are li
     - OT start or end missing (not possible since OT start and OT end date are computed)
 - [ ] AC13 (amber): Given any of the following, then the entry is amber:
     - clocked in more than 5 min after OT start
-     
-    - 
     - clocked out more than 5 min before OT end
     - request still pending manager approval
     - declared type differs from the approved type
@@ -130,6 +130,7 @@ Each entry gets an overall severity, which is its worst issue. All issues are li
 
 - [ ] Should red entries be blocked from certification rather than only warned (AC23)? Today the design allows it.
 - [ ] Should rejection require a reason, and should the staff member or their manager be notified?
+- [ ] Worked hours within ±30 minutes of approved hours can be validated by the Admin. Beyond that, the Approver must approve the difference.
 - [ ] Are the 5 min, 15 min and 1 h tolerances (AC12, AC13) company policy? Should they be configurable per department?
 - [ ] Can a pending request (amber) be certified, or must it wait for manager approval?
 - [ ] Can two admins work on the same department and date at once? If yes, how are conflicting drafts handled?
