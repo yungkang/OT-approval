@@ -56,7 +56,7 @@ TMS Adminstrators
 - [ ] AC8: Each entry shows clock-in and clock-out from the time clock, and "Not recorded" for any that is missing.
 - [ ] AC9: Any declared value that differs from the approved value is visibly highlighted.
 - [ ] AC10: Given there is no request, then the Approved row shows "No request found" and dashes for its values.
-- [ ] AC11: OT types are Pre-shift OT, Post-shift OT, Recall – REST day and Recall – OFF day.
+- [ ] AC11: OT types are Pre-shift OT, Pre-shift Next-day OT, Post-shift OT, Post-shift previous day OT, Recall – REST day and Recall – OFF day.
 
 ### Alerts
 
@@ -66,14 +66,16 @@ Each entry gets an overall severity, which is its worst issue. All issues are li
     - no clock-in and no clock-out ("staff did not report for OT; do not award")
     - only one of clock-in or clock-out missing
     - clock-out before clock-in
-    - clock-in/out with no overlap with the declared OT window
-    - no request found in SharePoint
-    - the request was rejected by the manager
-    - declared hours exceed approved hours by more than 1 h
-    - OT end before OT start
-    - OT start or end missing
+    - clock-in/out with no overlap with the declared OT window (??)
+    - no request found in SharePoint (No prior approval)
+    - the request was rejected by the manager (we will show if staff still go ahread with OT)
+    - declared hours exceed approved hours by more than 1 h (OT ended late)
+    - OT end before OT start (not possible since OT start and OT end date are computed)
+    - OT start or end missing (not possible since OT start and OT end date are computed)
 - [ ] AC13 (amber): Given any of the following, then the entry is amber:
     - clocked in more than 5 min after OT start
+     
+    - 
     - clocked out more than 5 min before OT end
     - request still pending manager approval
     - declared type differs from the approved type
